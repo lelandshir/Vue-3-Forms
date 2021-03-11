@@ -1,5 +1,7 @@
 <template>
 	<form>
+		<b>User Credentials:</b>
+		<br />
 		<label>Email:</label>
 		<input type="email" required v-model="email" />
 		<label>Password:</label>
@@ -14,8 +16,9 @@
 			<label>Accept Terms & Conditions</label>
 			<input type="checkbox" v-model="terms" required />
 		</div>
+		<br />
 		<!-- OPTIONS ARRAY -->
-		<label>Options:</label>
+		<b>User Options:</b>
 		<div>
 			<label>Zendesk Training Module</label>
 			<input type="checkbox" value="ZTM" v-model="options" />
@@ -31,17 +34,23 @@
 			<input type="checkbox" value="Calendar" v-model="options" />
 		</div>
 	</form>
-	<h2>Demonstrating Two-way Data Binding:</h2>
-	<p>Email:</p>
-	<span id="special">{{ email }}</span>
-	<p>Password:</p>
-	<span id="special">{{ password }}</span>
-	<p>Role:</p>
-	<span id="special">{{ role }}</span>
-	<p>Terms Accepted:</p>
-	<span id="special">{{ terms }}</span>
-	<p>Options Selected:</p>
-	<span id="special">{{ options }}</span>
+	<article>
+		<h2>Demonstrating Two-way Data Binding:</h2>
+		<b>Email:</b><br />
+		<span id="special">{{ email }}</span
+		><br />
+		<b>Password:</b><br />
+		<span id="special">{{ password }}</span
+		><br />
+		<b>Role:</b><br />
+		<span id="special">{{ role }}</span
+		><br />
+		<b>Terms Accepted:</b><br />
+		<span id="special">{{ terms }}</span
+		><br />
+		<b>Options Selected:</b><br />
+		<span id="special">{{ options }}</span>
+	</article>
 </template>
 
 <script>
@@ -102,4 +111,9 @@ input[type="checkbox"]
     position: relative
     top: 2px
     margin-left: 1rem
+article b, form b
+    color: $secondary
+
+article b
+    text-decoration: underline
 </style>
