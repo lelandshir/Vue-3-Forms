@@ -1,5 +1,7 @@
 <template>
 	<h1>Vue Project 1.3: Forms</h1>
+
+	<p>Author: Léland Shirley</p>
 	<SignUpForm />
 </template>
 
